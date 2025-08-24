@@ -1,11 +1,12 @@
 {
   "name": "minecraft-manager-schemas",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "",
   "license": "ISC",
   "author": "",
   "type": "commonjs",
   "main": "build/index.js",
+  "types": "build/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/siparat/minecraft-manager-schemas"
