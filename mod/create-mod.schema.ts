@@ -9,6 +9,7 @@ export const CreateModSchema = z.object({
 		.string()
 		.min(50, { message: 'Минимальная длина описания – 50 символов' })
 		.max(1500, { message: 'Максимальная длина описания – 1500 символов' }),
+	descriptionImages: z.array(z.string().regex(/^\/(?:[^/]+\/)*[^/]+\.webp$/, { message: 'Используйте загруженное изображение' })),
 	image: z.string().regex(/^\/(?:[^/]+\/)*[^/]+\.webp$/, { message: 'Используйте загруженное изображение' }),
 	files: z.array(
 		z.string().regex(/^\/(?:[^/]+\/)*[^/]+\.(zip|mc\w+)$/, { message: 'Используйте загруженный файл мода' })
