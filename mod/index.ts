@@ -1,1 +1,1 @@
-export * from './create-mod.schema'
+export * from './create-mod.schema.js'

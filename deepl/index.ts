@@ -1,1 +1,1 @@
-export * from './translate.schema'
+export * from './translate.schema.js'

@@ -1,1 +1,1 @@
-export * from './upload-image.schema'
+export * from './upload-image.schema.js'

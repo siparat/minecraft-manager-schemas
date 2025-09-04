@@ -1,1 +1,1 @@
-export * from './create-builder-account.schema'
+export * from './create-builder-account.schema.js'

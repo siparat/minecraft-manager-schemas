@@ -1,3 +1,3 @@
-export * from './create-app.schema'
-export * from './create-issue.schema'
-export * from './update-sdk.schema'
+export * from './create-app.schema.js'
+export * from './create-issue.schema.js'
+export * from './update-sdk.schema.js'
