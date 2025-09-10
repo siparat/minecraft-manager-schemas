@@ -9,5 +9,8 @@ export const UpdateSdkSchema = z.object({
 	firstNativeCode: z.string(),
 	secondOpenCode: z.string(),
 	secondInterCode: z.string(),
-	secondNativeCode: z.string()
+	secondNativeCode: z.string(),
+	thirdOpenCode: z.string(),
+	thirdInterCode: z.string(),
+	thirdNativeCode: z.string()
 });
