@@ -14,5 +14,9 @@ export const CreateModSchema = z.object({
 	files: z.array(
 		z.string().regex(/^\/(?:[^/]+\/)*[^/]+\.(zip|mc\w+)$/, { message: 'Используйте загруженный файл мода' })
 	),
-	versions: z.array(z.string().regex(/^\d+\.\d+\.\d+$/, { message: 'Версионность указана неверно. Пример: X.Y.Z`' }))
+	versions: z.array(
+		z.string().regex(/^\d+\.\d+(\.\d+)?$/, {
+			message: 'Версионность указана неверно. Пример: X.Y или X.Y.Z'
+		})
+	)
 });
