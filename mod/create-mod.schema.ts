@@ -20,8 +20,8 @@ export const CreateModSchema = z.object({
 		})
 	),
 	versions: z.array(
-		z.string().regex(/^\d+\.\d+(\.\d+)?$/, {
-			message: 'Версионность указана неверно. Пример: X.Y или X.Y.Z'
+		z.string().regex(/^\d+(?:\.\d+){0,3}(?: \(beta\))?$/, {
+			message: 'Версия указана неверно. Пример: X, X.Y, X.Y.Z, X.Y.Z.W или X.Y (beta)'
 		})
 	)
 });
