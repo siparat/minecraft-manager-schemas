@@ -1,5 +1,5 @@
 import z from 'zod';
-import { ModCategory } from './mod-category.enum';
+import { ModCategory } from './mod-category.enum.js';
 
 export const CreateModSchema = z.object({
 	title: z
