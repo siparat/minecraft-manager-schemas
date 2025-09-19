@@ -1,4 +1,5 @@
 import z from 'zod';
+import { ModCategory } from './mod-category.enum';
 
 export const CreateModSchema = z.object({
 	title: z
@@ -19,6 +20,7 @@ export const CreateModSchema = z.object({
 			message: 'Используйте загруженный файл мода'
 		})
 	),
+	category: z.nativeEnum(ModCategory, { message: 'Укажите категорию' }),
 	versions: z.array(
 		z.string().regex(/^\d+(?:\.\d+){0,3}(?: \(beta\))?$/, {
 			message: 'Версия указана неверно. Пример: X, X.Y, X.Y.Z, X.Y.Z.W или X.Y (beta)'
