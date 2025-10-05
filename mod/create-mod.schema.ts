@@ -8,11 +8,11 @@ export const CreateModSchema = z.object({
 		.max(50, { message: 'Максимальная длина заголовка – 50 символов' }),
 	description: z.string().min(50, { message: 'Минимальная длина описания – 50 символов' }),
 	descriptionImages: z.array(
-		z.string().regex(/^(?:https?:\/\/[^/]+)?(?:\/[^/]+)*\/[^/]+\.(?:png|gif|jpe?g|webp|bmp|svg|tiff)$/, {
+		z.string().regex(/^(?:https?:\/\/[^\/]+)?(?:\/[^\/]+)*\/[^\/]+\.(?:png|gif|jpe?g|webp|bmp|svg|tiff)$/i, {
 			message: 'Используйте загруженное изображение'
 		})
 	),
-	image: z.string().regex(/^(?:https?:\/\/[^/]+)?(?:\/[^/]+)*\/[^/]+\.(?:png|gif|jpe?g|webp|bmp|svg|tiff)$/, {
+	image: z.string().regex(/^(?:https?:\/\/[^\/]+)?(?:\/[^\/]+)*\/[^\/]+\.(?:png|gif|jpe?g|webp|bmp|svg|tiff)$/i, {
 		message: 'Используйте загруженное изображение'
 	}),
 	files: z.array(
