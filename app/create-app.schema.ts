@@ -4,8 +4,8 @@ export const CreateAppSchema = z.object({
 	packageName: z
 		.string()
 		.regex(/^[a-z]+(\.[a-z][a-z0-9_]*)+$/, { message: 'Некорректное имя пакета. Пример: com.example.app' }),
-	banner: z.optional(z.string().regex(/^\/(?:[^/]+\/)*[^/]+\.webp$/, { message: 'Используйте загруженное изображение' })),
-	logo: z.string().regex(/^\/(?:[^/]+\/)*[^/]+\.webp$/, { message: 'Используйте загруженное изображение' }),
+	banner: z.optional(z.string().regex(/^(?:https?:\/\/[^/]+)?(?:\/[^/]+)*\/[^/]+\.(?:png|gif|jpe?g|webp|bmp|svg|tiff)$/, { message: 'Используйте загруженное изображение' })),
+	logo: z.string().regex(/^(?:https?:\/\/[^/]+)?(?:\/[^/]+)*\/[^/]+\.(?:png|gif|jpe?g|webp|bmp|svg|tiff)$/, { message: 'Используйте загруженное изображение' }),
 	translations: z
 		.array(
 			z.object({
