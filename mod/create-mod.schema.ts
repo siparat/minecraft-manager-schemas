@@ -5,8 +5,8 @@ export const CreateModSchema = z.object({
 	title: z
 		.string()
 		.min(2, { message: 'Минимальная длина заголовка – 2 символа' })
-		.max(50, { message: 'Максимальная длина заголовка – 50 символов' }),
-	description: z.string().min(50, { message: 'Минимальная длина описания – 50 символов' }),
+		.max(200, { message: 'Максимальная длина заголовка – 200 символов' }),
+	description: z.string().min(1, { message: 'Минимальная длина описания – 1 символ' }),
 	descriptionImages: z.array(
 		z.string().regex(/^(?:https?:\/\/[^\/]+)?(?:\/[^\/]+)*\/[^\/]+\.(?:png|gif|jpe?g|webp|bmp|svg|tiff)$/i, {
 			message: 'Используйте загруженное изображение'
@@ -16,9 +16,7 @@ export const CreateModSchema = z.object({
 		message: 'Используйте загруженное изображение'
 	}),
 	files: z.array(
-		z.string().regex(/^(?:https?:\/\/[^/]+)?(?:\/[^/]+)*\/[^/]+\.(?:zip|mc\w+)$/, {
-			message: 'Используйте загруженный файл мода'
-		})
+		z.string()
 	),
 	category: z.nativeEnum(ModCategory, { message: 'Укажите категорию' }),
 	versions: z.array(
