@@ -6,7 +6,10 @@ export const CreatePolicySchema = z.object({
 	slug: z
 		.string()
 		.min(1, "Slug обязателен")
-		.regex(/^[a-z0-9-]+$/, "Slug может содержать только строчные буквы, цифры и дефисы"),
+		.regex(
+			/^([a-z0-9-]+|[a-z0-9-]+(?:\.[a-z0-9-]+)*\.[a-z0-9]+)$/i,
+			"Slug должен быть либо обычным (tnt-app), либо с расширением (tnt-app.html)"
+		),
   
 	content: z
 		.string()
