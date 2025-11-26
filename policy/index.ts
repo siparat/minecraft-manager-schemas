@@ -1,1 +1,1 @@
-export { CreatePolicySchema } from './create-policy.schema'
+export { CreatePolicySchema } from './create-policy.schema.js'
