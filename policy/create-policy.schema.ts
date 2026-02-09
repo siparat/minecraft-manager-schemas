@@ -14,5 +14,5 @@ export const CreatePolicySchema = z.object({
 	content: z
 		.string()
 		.min(10, "Текст политики слишком короткий")
-		.max(200000, "Текст слишком длинный")
+		.max(5000000, "Текст слишком длинный")
 })
