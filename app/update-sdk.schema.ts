@@ -1,5 +1,5 @@
 import z from 'zod';
-import { AdsNativeType } from './ads-native-type.enum';
+import { AdsNativeType } from './ads-native-type.enum.js';
 
 export const UpdateSdkSchema = z.object({
 	metricaToken: z.string(),
