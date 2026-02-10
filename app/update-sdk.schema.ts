@@ -1,4 +1,5 @@
 import z from 'zod';
+import { AdsNativeType } from './ads-native-type.enum';
 
 export const UpdateSdkSchema = z.object({
 	metricaToken: z.string(),
@@ -14,4 +15,5 @@ export const UpdateSdkSchema = z.object({
 	thirdInterCode: z.string(),
 	thirdNativeCode: z.string(),
 	delayInter: z.number().min(0),
+	adsNativeType: z.nativeEnum(AdsNativeType, { message: 'Укажите корректный тип нативной рекламы' })
 });
