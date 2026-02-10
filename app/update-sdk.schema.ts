@@ -12,5 +12,6 @@ export const UpdateSdkSchema = z.object({
 	secondNativeCode: z.string(),
 	thirdOpenCode: z.string(),
 	thirdInterCode: z.string(),
-	thirdNativeCode: z.string()
+	thirdNativeCode: z.string(),
+	delayInter: z.number().min(0),
 });
