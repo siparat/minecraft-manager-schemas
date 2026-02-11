@@ -18,5 +18,9 @@ export const UpdateSdkSchema = z.object({
 	thirdNativeCode: z.string(),
 	thirdBannerCode: z.string(),
 	delayInter: z.number().min(0),
-	adsNativeType: z.nativeEnum(AdsNativeType, { message: 'Укажите корректный тип нативной рекламы' })
+	adsNativeType: z.nativeEnum(AdsNativeType, { message: 'Укажите корректный тип нативной рекламы' }),
+	countNativePreload: z.number().min(0),
+	chanceShowOpenAds: z.number().min(0).max(100),
+	chanceShowInterAds: z.number().min(0).max(100),
+	chanceShowNativeAds: z.number().min(0).max(100)
 });
